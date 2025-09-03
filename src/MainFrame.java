@@ -10,6 +10,9 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.event.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.logging.Logger;
 
 public class MainFrame extends JFrame{
@@ -87,10 +90,29 @@ public class MainFrame extends JFrame{
     private JPanel jPanel;
     private JCheckBox UpperCheckBox;
     private JButton deleteButton;
+    private JButton SearchButton;
+    private JButton ClearnButton;
+    private JButton PinYinButton;
+    private JButton HistoryButton;
+    private JButton TestButton;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
     private JPopupMenu MousePopupMenu;
     private GlobalKeyListener globalKeyListener;
     private String OutputStringBuffer;
     private boolean WindowFocus;
+
+    private SQLiteJDBC sqLiteJDBC;
+
+    private static MainFrame mainFrame;
+
+    public static MainFrame getInstance() {
+        if (mainFrame == null) {
+            mainFrame = new MainFrame();
+        }
+        return mainFrame;
+    }
 
     class CustomMouseListener extends MouseAdapter{
 
@@ -129,12 +151,16 @@ public class MainFrame extends JFrame{
 
     public MainFrame(){
 
+        mainFrame = this;
         this.OutputStringBuffer = new String();
+        this.sqLiteJDBC = new SQLiteJDBC();
+        this.sqLiteJDBC.CreateHistoryTabel();
 
         Logger MainLogger = Logger.getLogger("MainFrame");
 
-        this.setTitle("LessonScreenKeyboard");
+        this.setTitle("反伽卡他卡摸鱼神器");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         this.setResizable(false);
 
         this.addWindowFocusListener(new WindowFocusListener() {
@@ -219,41 +245,48 @@ public class MainFrame extends JFrame{
     }
 
     private void LostFocusActionPerformed(WindowEvent event){
-        System.out.println("失焦！");
         this.WindowFocus = false;
     }
 
     private void JFrameClick(MouseEvent event){
-        System.out.println("聚焦！");
         this.WindowFocus = true;
     }
 
     private void GlobalKeyboardPressedActionPerformed(NativeKeyEvent nativeKeyEvent){
         if (!this.WindowFocus) {
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CAPS_LOCK) ;
-//            //左
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CAPS_LOCK);
             if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT) {
+                if(this.getState() == JFrame.ICONIFIED) {
+                    this.setState(JFrame.NORMAL);
+                }
                 this.setAlwaysOnTop(true);
             }
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            //Windows键
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            //右
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                System.out.println("L Click!");
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
-//            //Windows键
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            //Windows键
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            //右
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            //Windows键
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+        } else{
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CAPS_LOCK) UpperCheckBox.doClick();
+            if(nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_A) JOptionPane.showMessageDialog(this, "The key can working!", "INFO", JOptionPane.INFORMATION_MESSAGE);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT){
+                if(Desktop.isDesktopSupported()){
+                    Desktop desktop = Desktop.getDesktop();
+                    try{
+                        desktop.browse(new URI("https://cn.bing.com"));
+                    }catch (IOException | URISyntaxException err){
+                        err.printStackTrace();
+                    }
+                }else {
+                    JOptionPane.showMessageDialog(this, "Desktop is not supported!", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
         }
-
     }
 
     private void GlobalKeyboardReleasedActionPerformed(NativeKeyEvent nativeKeyEvent){
@@ -262,23 +295,16 @@ public class MainFrame extends JFrame{
             if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT){
                 this.setAlwaysOnTop(false);
             }
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            //Windows键
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT)
-//                ;
-//            //右
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                System.out.println("L Click!");
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
-//            //Windows键
-//            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT)
-//                ;
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            //Windows键
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT);
+            //右
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ALT && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
+            //Windows键
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
 
     }
 
@@ -386,10 +412,35 @@ public class MainFrame extends JFrame{
             if(!this.OutputStringBuffer.isEmpty())
                 this.OutputStringBuffer = this.OutputStringBuffer.substring(0, this.OutputStringBuffer.length() - 1);
         }
-        else {
+        else if(ClickButtonChar.equals(this.SearchButton.getActionCommand())){
+            this.sqLiteJDBC.Insert2History(this.OutputStringBuffer);
+            if(Desktop.isDesktopSupported()){
+                Desktop desktop = Desktop.getDesktop();
+                try{
+                    desktop.browse(new URI("https://cn.bing.com/search?q=" + this.OutputStringBuffer));
+                }catch (IOException | URISyntaxException err){
+                    err.printStackTrace();
+                }
+            }else {
+                JOptionPane.showMessageDialog(this, "Desktop is not supported!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        }
+        else if(ClickButtonChar.equals(this.ClearnButton.getActionCommand())){
+            this.OutputStringBuffer = "";
+            this.outputTextField.setText(this.OutputStringBuffer);
+        }
+        else if(ClickButtonChar.equals(this.PinYinButton.getActionCommand())){
+            PinYinFrame pinYinFrame = new PinYinFrame(this);
+        }
+        else if(ClickButtonChar.equals(this.HistoryButton.getActionCommand())){
+            HistoryFrame historyFrame = new HistoryFrame(this);
+        }
+        else{
             this.OutputStringBuffer += ClickButtonChar;
         }
         this.outputTextField.setText(this.OutputStringBuffer);
+
     }
 
     private void InitButton(){
@@ -817,6 +868,40 @@ public class MainFrame extends JFrame{
                 ButtonActionPerformed(e);
             }
         });
+        this.SearchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ButtonActionPerformed(e);
+            }
+        });
+        this.ClearnButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ButtonActionPerformed(e);
+            }
+        });
+        this.PinYinButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ButtonActionPerformed(e);
+            }
+        });
+        this.HistoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ButtonActionPerformed(e);
+            }
+        });
+    }
+
+    public void setOutputTextField(String string){
+        this.OutputStringBuffer = string;
+        this.outputTextField.setText(this.OutputStringBuffer);
+    }
+
+    public void addOutputTextField(String string){
+        this.OutputStringBuffer += string;
+        this.outputTextField.setText(this.OutputStringBuffer);
     }
 
     public static void main(String[] args){

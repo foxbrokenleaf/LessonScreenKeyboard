@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LessonScreenKeyboard:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LessonScreenKeyboard_jar</output-path>
+    <root id="archive" name="LessonScreenKeyboard.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="LessonScreenKeyboard" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Temp/jnativehook-2.2.2.jar" path-in-jar="/" />
+      <element id="library" level="project" name="src" />
+      <element id="library" level="application" name="jnativehook-2.2.2" />
+    </root>
+  </artifact>
+</component>
