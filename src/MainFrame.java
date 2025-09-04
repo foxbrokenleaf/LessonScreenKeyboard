@@ -13,6 +13,8 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Logger;
 
 public class MainFrame extends JFrame{
@@ -158,7 +160,7 @@ public class MainFrame extends JFrame{
 
         Logger MainLogger = Logger.getLogger("MainFrame");
 
-        this.setTitle("反伽卡他卡摸鱼神器");
+        this.setTitle("反伽卡他卡摸鱼神器 - " + new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis())));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -249,9 +251,21 @@ public class MainFrame extends JFrame{
             }
         });
 
+        Timer timer = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainFrameTitleTimeUpdate(e);
+            }
+        });
+        timer.start();
+
         this.pack();
         this.setVisible(true);
 
+    }
+
+    private void MainFrameTitleTimeUpdate(ActionEvent event){
+        this.setTitle("反伽卡他卡摸鱼神器 - " + new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis())));
     }
 
     private void LostFocusActionPerformed(WindowEvent event){
