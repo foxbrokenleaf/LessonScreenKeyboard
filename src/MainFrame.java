@@ -204,8 +204,15 @@ public class MainFrame extends JFrame{
 
         this.add(this.jPanel);
 
+        this.outputTextField.setBorder(BorderFactory.createLineBorder(new Color(0xe8, 0xe8, 0xe8)));
+
         this.MousePopupMenu = new JPopupMenu();
+        this.MousePopupMenu.setBackground(new Color(0xff, 0xff, 0xff));
+
         JMenuItem MousePopupMenuItem_1 = new JMenuItem("复制");
+        MousePopupMenuItem_1.setBackground(new Color(0xfc, 0xe4, 0xec));
+        MousePopupMenuItem_1.setForeground(new Color(0x2d, 0x2d, 0x2d));
+        MousePopupMenuItem_1.setBorder(BorderFactory.createLineBorder(new Color(0xe8, 0xe8, 0xe8)));
         MousePopupMenuItem_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -213,6 +220,9 @@ public class MainFrame extends JFrame{
             }
         });
         JMenuItem MousePopupMenuItem_2 = new JMenuItem("粘贴");
+        MousePopupMenuItem_2.setBackground(new Color(0xfc, 0xe4, 0xec));
+        MousePopupMenuItem_2.setForeground(new Color(0x2d, 0x2d, 0x2d));
+        MousePopupMenuItem_2.setBorder(BorderFactory.createLineBorder(new Color(0xe8, 0xe8, 0xe8)));
         MousePopupMenuItem_2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

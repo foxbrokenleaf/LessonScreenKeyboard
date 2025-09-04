@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="903" height="426"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-197380"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="84016" class="javax.swing.JTextField" binding="outputTextField" default-binding="true">
@@ -15,6 +17,8 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-1"/>
+          <foreground color="-13421773"/>
           <text value="Output"/>
           <toolTipText value="点击字符后字符将会出现在这里"/>
         </properties>
@@ -24,6 +28,9 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
+          <selected value="false"/>
           <text value="A"/>
         </properties>
       </component>
@@ -32,6 +39,8 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="B"/>
         </properties>
       </component>
@@ -40,6 +49,8 @@
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="C"/>
         </properties>
       </component>
@@ -48,6 +59,8 @@
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="D"/>
         </properties>
       </component>
@@ -56,6 +69,8 @@
           <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="E"/>
         </properties>
       </component>
@@ -64,6 +79,8 @@
           <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="F"/>
         </properties>
       </component>
@@ -72,6 +89,8 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="G"/>
         </properties>
       </component>
@@ -80,6 +99,8 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="H"/>
         </properties>
       </component>
@@ -88,6 +109,8 @@
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="I"/>
         </properties>
       </component>
@@ -96,6 +119,8 @@
           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="J"/>
         </properties>
       </component>
@@ -104,6 +129,8 @@
           <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="K"/>
         </properties>
       </component>
@@ -112,6 +139,8 @@
           <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="L"/>
         </properties>
       </component>
@@ -120,6 +149,8 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="M"/>
         </properties>
       </component>
@@ -128,6 +159,8 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="N"/>
         </properties>
       </component>
@@ -136,6 +169,8 @@
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="O"/>
         </properties>
       </component>
@@ -144,6 +179,8 @@
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="P"/>
         </properties>
       </component>
@@ -152,6 +189,8 @@
           <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="Q"/>
         </properties>
       </component>
@@ -160,6 +199,8 @@
           <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="R"/>
         </properties>
       </component>
@@ -168,6 +209,8 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="S"/>
         </properties>
       </component>
@@ -176,6 +219,8 @@
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="T"/>
         </properties>
       </component>
@@ -184,6 +229,8 @@
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="U"/>
         </properties>
       </component>
@@ -192,6 +239,8 @@
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="V"/>
         </properties>
       </component>
@@ -200,6 +249,8 @@
           <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="W"/>
         </properties>
       </component>
@@ -208,6 +259,8 @@
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="X"/>
         </properties>
       </component>
@@ -216,6 +269,8 @@
           <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="7"/>
         </properties>
       </component>
@@ -224,6 +279,8 @@
           <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="8"/>
         </properties>
       </component>
@@ -232,6 +289,8 @@
           <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="9"/>
         </properties>
       </component>
@@ -240,6 +299,8 @@
           <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="4"/>
         </properties>
       </component>
@@ -248,6 +309,8 @@
           <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="5"/>
         </properties>
       </component>
@@ -256,6 +319,8 @@
           <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="6"/>
         </properties>
       </component>
@@ -264,6 +329,8 @@
           <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="1"/>
         </properties>
       </component>
@@ -272,6 +339,8 @@
           <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="2"/>
         </properties>
       </component>
@@ -280,6 +349,8 @@
           <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="3"/>
         </properties>
       </component>
@@ -288,6 +359,8 @@
           <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="Y"/>
         </properties>
       </component>
@@ -296,6 +369,8 @@
           <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="0"/>
         </properties>
       </component>
@@ -304,6 +379,8 @@
           <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="Z"/>
         </properties>
       </component>
@@ -312,6 +389,8 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="`"/>
         </properties>
       </component>
@@ -320,6 +399,8 @@
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="!"/>
         </properties>
       </component>
@@ -328,6 +409,8 @@
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="@"/>
         </properties>
       </component>
@@ -336,6 +419,8 @@
           <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="#"/>
         </properties>
       </component>
@@ -344,6 +429,8 @@
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="$"/>
         </properties>
       </component>
@@ -352,6 +439,8 @@
           <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="%"/>
         </properties>
       </component>
@@ -360,6 +449,8 @@
           <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="^"/>
         </properties>
       </component>
@@ -368,6 +459,8 @@
           <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="0x26"/>
         </properties>
       </component>
@@ -376,6 +469,8 @@
           <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="*"/>
         </properties>
       </component>
@@ -384,6 +479,8 @@
           <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value=","/>
         </properties>
       </component>
@@ -392,6 +489,8 @@
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="."/>
         </properties>
       </component>
@@ -400,6 +499,8 @@
           <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="/"/>
         </properties>
       </component>
@@ -408,6 +509,8 @@
           <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="0x7E"/>
         </properties>
       </component>
@@ -416,6 +519,8 @@
           <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="_"/>
         </properties>
       </component>
@@ -424,6 +529,8 @@
           <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="+"/>
         </properties>
       </component>
@@ -432,6 +539,8 @@
           <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="{"/>
         </properties>
       </component>
@@ -440,6 +549,8 @@
           <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="}"/>
         </properties>
       </component>
@@ -448,6 +559,8 @@
           <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="\"/>
         </properties>
       </component>
@@ -456,6 +569,8 @@
           <grid row="7" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value=":"/>
         </properties>
       </component>
@@ -464,6 +579,8 @@
           <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="'"/>
         </properties>
       </component>
@@ -472,6 +589,8 @@
           <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value=";"/>
         </properties>
       </component>
@@ -480,6 +599,8 @@
           <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="]"/>
         </properties>
       </component>
@@ -488,6 +609,8 @@
           <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="["/>
         </properties>
       </component>
@@ -496,6 +619,8 @@
           <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="="/>
         </properties>
       </component>
@@ -504,6 +629,8 @@
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="-"/>
         </properties>
       </component>
@@ -512,6 +639,8 @@
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value=")"/>
         </properties>
       </component>
@@ -520,6 +649,8 @@
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="("/>
         </properties>
       </component>
@@ -528,6 +659,8 @@
           <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="&quot;"/>
         </properties>
       </component>
@@ -536,6 +669,8 @@
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="|"/>
         </properties>
       </component>
@@ -544,6 +679,8 @@
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="&lt;"/>
         </properties>
       </component>
@@ -552,6 +689,8 @@
           <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="&gt;"/>
         </properties>
       </component>
@@ -560,6 +699,8 @@
           <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="?"/>
         </properties>
       </component>
@@ -568,6 +709,8 @@
           <grid row="8" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="Space"/>
         </properties>
       </component>
@@ -576,6 +719,8 @@
           <grid row="8" column="7" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="Delete ⬅"/>
         </properties>
       </component>
@@ -584,6 +729,8 @@
           <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="搜索"/>
         </properties>
       </component>
@@ -592,6 +739,8 @@
           <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="清除"/>
         </properties>
       </component>
@@ -600,7 +749,9 @@
           <grid row="8" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-657931"/>
           <enabled value="true"/>
+          <foreground color="-13816531"/>
           <selected value="true"/>
           <text value="大写"/>
         </properties>
@@ -610,6 +761,8 @@
           <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="拼音"/>
         </properties>
       </component>
@@ -618,6 +771,8 @@
           <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-472868"/>
+          <foreground color="-13816531"/>
           <text value="历史"/>
         </properties>
       </component>
@@ -626,7 +781,10 @@
           <grid row="4" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-203540"/>
           <enabled value="false"/>
+          <foreground color="-4605511"/>
+          <selected value="false"/>
           <text value="测试"/>
         </properties>
       </component>
@@ -635,7 +793,10 @@
           <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-203540"/>
           <enabled value="false"/>
+          <foreground color="-4605511"/>
+          <selected value="false"/>
           <text value=" "/>
         </properties>
       </component>
@@ -644,7 +805,10 @@
           <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-203540"/>
           <enabled value="false"/>
+          <foreground color="-4605511"/>
+          <selected value="false"/>
           <text value=" "/>
         </properties>
       </component>
@@ -653,7 +817,10 @@
           <grid row="7" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-203540"/>
           <enabled value="false"/>
+          <foreground color="-4605511"/>
+          <selected value="false"/>
           <text value=" "/>
         </properties>
       </component>

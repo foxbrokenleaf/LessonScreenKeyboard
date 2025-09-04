@@ -30,6 +30,9 @@ public class HistoryFrame extends JFrame{
         for(int i = strings.toArray().length - 1; i >= 0;i--){
             JButton jButton = new JButton(strings.get(i));
             jButton.setMaximumSize(new Dimension(Integer.MAX_VALUE, jButton.getPreferredSize().height));
+            jButton.setBackground(new Color(0xf8, 0xc8, 0xdc));
+            jButton.setForeground(new Color(0x2d, 0x2d, 0x2d));
+            jButton.setBorder(BorderFactory.createLineBorder(new Color(0xE8E8E8)));
             jButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -37,7 +40,7 @@ public class HistoryFrame extends JFrame{
                 }
             });
             jPanel.add(jButton);
-            jPanel.add(Box.createVerticalStrut(5));
+            jPanel.add(Box.createVerticalStrut(1));
         }
         this.jScrollPane.setViewportView(jPanel);
         this.add(this.jScrollPane);

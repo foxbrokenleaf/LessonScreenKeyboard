@@ -50,12 +50,11 @@ public class PinYinFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        this.setSize(350, 250);
+        this.setSize(350, 260);
 
         this.jScrollPane = new JScrollPane();
         this.jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         this.jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-
         this.scrollPanel.setLayout(new BoxLayout(this.scrollPanel, BoxLayout.X_AXIS));
 
         this.InputStringBuffer = new String();
@@ -318,6 +317,9 @@ public class PinYinFrame extends JFrame{
         int DynamicButtonInterval = 5;
         JButton jButton1 = new JButton(string);
         jButton.setMaximumSize(new Dimension(jButton.getPreferredSize().width, Integer.MAX_VALUE));
+        jButton1.setBackground(new Color(0xf8, 0xc8, 0xdc));
+        jButton1.setForeground(new Color(0x2d, 0x2d, 0x2d));
+        jButton1.setBorder(BorderFactory.createLineBorder(new Color(0xE8E8E8)));
         jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -325,7 +327,7 @@ public class PinYinFrame extends JFrame{
             }
         });
         this.scrollPanel.add(jButton1);
-        this.scrollPanel.add(Box.createVerticalStrut(DynamicButtonInterval));
+        this.scrollPanel.add(Box.createHorizontalStrut(DynamicButtonInterval));
     }
 
     private void hanziButtonActionPerformd(ActionEvent event){
