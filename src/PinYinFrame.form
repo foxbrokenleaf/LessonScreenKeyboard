@@ -320,7 +320,7 @@
         <properties>
           <background color="-472868"/>
           <foreground color="-13816531"/>
-          <text value="Delete"/>
+          <text value="Delete ⬅"/>
         </properties>
       </component>
     </children>

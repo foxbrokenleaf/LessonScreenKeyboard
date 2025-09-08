@@ -1,3 +1,7 @@
+import com.github.kwhat.jnativehook.GlobalScreen;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyEvent;
+import com.github.kwhat.jnativehook.keyboard.NativeKeyListener;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -43,6 +47,27 @@ public class PinYinFrame extends JFrame{
 
     private String PinYinJason;
 
+    private GlobalKeyListener globalKeyListener;
+
+    class GlobalKeyListener implements NativeKeyListener {
+
+        @Override
+        public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent){
+            GlobalKeyboardPressedActionPerformed(nativeKeyEvent);
+        }
+
+        @Override
+        public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent){
+
+        }
+
+        @Override
+        public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent){
+
+        }
+
+    }
+
     public PinYinFrame(MainFrame frame){
         this.mainFrame = frame;
 
@@ -60,8 +85,41 @@ public class PinYinFrame extends JFrame{
         this.InputStringBuffer = new String();
         InitButton();
 
+        this.globalKeyListener = new PinYinFrame.GlobalKeyListener();
+        GlobalScreen.addNativeKeyListener(globalKeyListener);
+
         this.add(pane1);
         this.setVisible(true);
+    }
+
+    private void GlobalKeyboardPressedActionPerformed(NativeKeyEvent nativeKeyEvent){
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_A) this.aButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_B) this.bButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_C) this.cButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_D) this.dButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_E) this.eButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_F) this.fButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_G) this.gButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_H) this.hButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_I) this.iButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_J) this.jButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_K) this.kButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_L) this.lButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_M) this.mButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_N) this.nButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_O) this.oButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_P) this.pButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Q) this.qButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_R) this.rButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_S) this.sButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_T) this.tButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_U) this.uButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_V) this.vButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_W) this.wButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_X) this.xButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Y) this.yButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Z) this.zButton.doClick();
+        if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_BACKSPACE) this.deleteButton.doClick();
     }
 
     private void ButtonActionPerformed(ActionEvent event){

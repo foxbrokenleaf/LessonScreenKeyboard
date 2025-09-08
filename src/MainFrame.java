@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 public class MainFrame extends JFrame{
 //    private JFrame jFrame;
-    private JTextField outputTextField;
+    private JLabel outputTextField;
     private JButton aButton;
     private JButton bButton;
     private JButton cButton;
@@ -98,16 +98,17 @@ public class MainFrame extends JFrame{
     private JButton HistoryButton;
     private JButton TestButton;
     private JButton button2;
-    private JButton button3;
-    private JButton button4;
+    private JCheckBox shiftCheckBox;
+    private JComboBox SearchEnginecomboBox;
     private JPopupMenu MousePopupMenu;
-    private GlobalKeyListener globalKeyListener;
+    private MainFrame.GlobalKeyListener globalKeyListener;
     private String OutputStringBuffer;
     private boolean WindowFocus;
 
     private SQLiteJDBC sqLiteJDBC;
 
     private static MainFrame mainFrame;
+
 
     public static MainFrame getInstance() {
         if (mainFrame == null) {
@@ -120,7 +121,7 @@ public class MainFrame extends JFrame{
 
         @Override
         public void mouseReleased(MouseEvent event){
-            if(event.isPopupTrigger()) MouseActionPerformedReleased(event);
+            MouseActionPerformedReleased(event);
         }
     }
 
@@ -160,6 +161,7 @@ public class MainFrame extends JFrame{
 
         Logger MainLogger = Logger.getLogger("MainFrame");
 
+        this.setIconImage(new ImageIcon("icon.png").getImage());
         this.setTitle("反伽卡他卡摸鱼神器 - " + new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis())));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -236,12 +238,13 @@ public class MainFrame extends JFrame{
 
         this.outputTextField.addMouseListener(new CustomMouseListener());
 
+
         try{
             GlobalScreen.registerNativeHook();
         }catch (NativeHookException err){
             err.printStackTrace();
         }
-        this.globalKeyListener = new GlobalKeyListener();
+        this.globalKeyListener = new MainFrame.GlobalKeyListener();
         GlobalScreen.addNativeKeyListener(globalKeyListener);
         InitButton();
         this.UpperCheckBox.addActionListener(new ActionListener() {
@@ -259,8 +262,19 @@ public class MainFrame extends JFrame{
         });
         timer.start();
 
+        this.TestButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TestUnit(e);
+            }
+        });
+
         this.pack();
         this.setVisible(true);
+
+    }
+
+    private void TestUnit(ActionEvent event){
 
     }
 
@@ -296,13 +310,97 @@ public class MainFrame extends JFrame{
             //Windows键
             if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_META && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_RIGHT);
         } else{
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_BACKSPACE) this.deleteButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ESCAPE) this.ClearnButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_ENTER) this.SearchButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_A) this.aButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_B) this.bButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_C) this.cButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_D) this.dButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_E) this.eButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_F) this.fButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_G) this.gButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_H) this.hButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_I) this.iButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_J) this.jButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_K) this.kButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_L) this.lButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_M) this.mButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_N) this.nButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_O) this.oButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_P) this.pButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Q) this.qButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_R) this.rButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_S) this.sButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_T) this.tButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_U) this.uButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_V) this.vButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_W) this.wButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_X) this.xButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Y) this.yButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_Z) this.zButton.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SPACE) this.Button_0x20.doClick();
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_SHIFT) this.shiftCheckBox.setSelected(!this.shiftCheckBox.isSelected());
+            if (this.shiftCheckBox.isSelected()) {
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL) this.PinYinButton.doClick();
+                if (nativeKeyEvent.getKeyCode() == 41) this.Button_0x7E.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_1) this.Button_0x21.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_2) this.Button_0x40.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_3) this.Button_0x23.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_4) this.Button_0x24.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_5) this.Button_0x25.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_6) this.Button_0x5E.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_7) this.Button_0x26.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_8) this.Button_0x2A.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_9) this.Button_0x28.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_0) this.Button_0x29.doClick();
+                if (nativeKeyEvent.getKeyCode() == 12) this.Button_0x5F.doClick();
+                if (nativeKeyEvent.getKeyCode() == 13) this.Button_0x2B.doClick();
+                if (nativeKeyEvent.getKeyCode() == 26) this.Button_0x7B.doClick();
+                if (nativeKeyEvent.getKeyCode() == 27) this.Button_0x7D.doClick();
+                if (nativeKeyEvent.getKeyCode() == 39) this.Button_0x3A.doClick();
+                if (nativeKeyEvent.getKeyCode() == 40) this.Button_0x22.doClick();
+                if (nativeKeyEvent.getKeyCode() == 43) this.Button_0x7C.doClick();
+                if (nativeKeyEvent.getKeyCode() == 51) this.Button_0x3C.doClick();
+                if (nativeKeyEvent.getKeyCode() == 52) this.Button_0x3E.doClick();
+                if (nativeKeyEvent.getKeyCode() == 53) this.Button_0x3F.doClick();
+            }
+            else{
+                if(nativeKeyEvent.getKeyCode() == 41) this.Button_0x60.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_0) this.Button_0.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_1) this.Button_1.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_2) this.Button_2.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_3) this.Button_3.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_4) this.Button_4.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_5) this.Button_5.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_6) this.Button_6.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_7) this.Button_7.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_8) this.Button_8.doClick();
+                if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_9) this.Button_9.doClick();
+                if (nativeKeyEvent.getKeyCode() == 12) this.Button_0x2D.doClick();
+                if (nativeKeyEvent.getKeyCode() == 13) this.Button_0x3D.doClick();
+                if (nativeKeyEvent.getKeyCode() == 26) this.Button_0x5B.doClick();
+                if (nativeKeyEvent.getKeyCode() == 27) this.Button_0x5D.doClick();
+                if (nativeKeyEvent.getKeyCode() == 39) this.Button_0x3B.doClick();
+                if (nativeKeyEvent.getKeyCode() == 40) this.Button_0x27.doClick();
+                if (nativeKeyEvent.getKeyCode() == 43) this.Button_0x5C.doClick();
+                if (nativeKeyEvent.getKeyCode() == 51) this.Button_0x2C.doClick();
+                if (nativeKeyEvent.getKeyCode() == 52) this.Button_0x2E.doClick();
+                if (nativeKeyEvent.getKeyCode() == 53) this.Button_0x2F.doClick();
+            }
             if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CAPS_LOCK) UpperCheckBox.doClick();
-            if(nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_A) JOptionPane.showMessageDialog(this, "The key can working!", "INFO", JOptionPane.INFORMATION_MESSAGE);
-            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_CONTROL && nativeKeyEvent.getKeyLocation() == NativeKeyEvent.KEY_LOCATION_LEFT){
+            if (nativeKeyEvent.getKeyCode() == NativeKeyEvent.VC_F1){
                 if(Desktop.isDesktopSupported()){
                     Desktop desktop = Desktop.getDesktop();
+                    String SearchEngine = new String();
+                    if(this.SearchEnginecomboBox.getSelectedItem().equals("必应")){
+                        SearchEngine = "https://www.bing.com";
+                    }
+                    else if(this.SearchEnginecomboBox.getSelectedItem().equals("谷歌")){
+                        SearchEngine = "https://www.google.com";
+                    }
                     try{
-                        desktop.browse(new URI("https://cn.bing.com"));
+                        desktop.browse(new URI(SearchEngine));
                     }catch (IOException | URISyntaxException err){
                         err.printStackTrace();
                     }
@@ -310,6 +408,7 @@ public class MainFrame extends JFrame{
                     JOptionPane.showMessageDialog(this, "Desktop is not supported!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
+
         }
     }
 
@@ -337,9 +436,8 @@ public class MainFrame extends JFrame{
     }
 
     private void MouseActionPerformedReleased(MouseEvent event){
-        this.MousePopupMenu.show(event.getComponent(), event.getX(), event.getY());
-        Logger MouseLogger = Logger.getLogger("Mouse");
-        MouseLogger.info("Mouse released in X:" + event.getX() + " Y:" + event.getY());
+        this.WindowFocus = true;
+        if(event.isPopupTrigger()) this.MousePopupMenu.show(event.getComponent(), event.getX(), event.getY());
     }
 
     private void MousePopupMenuActionPerformed(ActionEvent event){
@@ -369,6 +467,7 @@ public class MainFrame extends JFrame{
     }
 
     private void UpperCheckBoxActionPerformed(ActionEvent event){
+        this.WindowFocus = true;
         if(this.UpperCheckBox.isSelected()){
             this.aButton.setText("A");
             this.bButton.setText("B");
@@ -429,6 +528,7 @@ public class MainFrame extends JFrame{
 
     private void ButtonActionPerformed(ActionEvent event){
         Logger ButtonLogger = Logger.getLogger("Button");
+        this.WindowFocus = true;
         String ClickButtonChar = event.getActionCommand();
         ButtonLogger.info("Click Button:" + ClickButtonChar);
         if(ClickButtonChar.equals(this.Button_0x20.getActionCommand())) ClickButtonChar = " ";
@@ -440,8 +540,16 @@ public class MainFrame extends JFrame{
             this.sqLiteJDBC.Insert2History(this.OutputStringBuffer);
             if(Desktop.isDesktopSupported()){
                 Desktop desktop = Desktop.getDesktop();
+                String SearchEngine = new String();
+                if(this.SearchEnginecomboBox.getSelectedItem().equals("必应")){
+                    SearchEngine = "https://www.bing.com";
+                }
+                else if(this.SearchEnginecomboBox.getSelectedItem().equals("谷歌")){
+                    SearchEngine = "https://www.google.com";
+                }
                 try{
-                    desktop.browse(new URI("https://cn.bing.com/search?q=" + this.OutputStringBuffer));
+                    this.OutputStringBuffer = this.OutputStringBuffer.replace(" ", "%20");
+                    desktop.browse(new URI(SearchEngine + "/search?q=" + this.OutputStringBuffer));
                 }catch (IOException | URISyntaxException err){
                     err.printStackTrace();
                 }
